@@ -6,5 +6,5 @@
 4. Implement Javascript functionality
 5. Create SQL database
 6. Fuse it all together
-7. test it all
+7. Test it all
 8. Make presentation
