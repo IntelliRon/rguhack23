@@ -1,0 +1,31 @@
+nav{
+	background-color: purple;
+	outline: black;
+}
+
+p{
+	color: white;
+	font-size: 20px;
+}
+
+h1{
+	font-size: 40px;
+}
+
+h1, h2, h3, h4{
+	color: black;
+}
+
+header{
+	background-color: purple;
+	padding-bottom: 10px;
+}
+
+body{
+	background-color: white;
+}
+
+mapContainer{
+	outline: black;
+}
+
