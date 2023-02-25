@@ -11,6 +11,8 @@ p{
 
 h1{
 	font-size: 40px;
+	float: center-top;
+	text-align: top;
 }
 
 h1, h2, h3, h4{
@@ -19,6 +21,8 @@ h1, h2, h3, h4{
 
 header{
 	background-color: purple;
+	height: 90px;
+	width: 1510px;
 	padding-bottom: 10px;
 }
 
@@ -38,7 +42,14 @@ ol{
 	
 }
 
+img{
+	float: left;
+}
+
 li{
 	color: black;
+	outline: white;
 	float: center;
 }
+
+object.onmouseover = Highlight(This);
