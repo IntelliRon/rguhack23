@@ -1,6 +1,7 @@
 nav{
 	background-color: purple;
 	outline: black;
+	float: centre;
 }
 
 p{
@@ -29,3 +30,15 @@ mapContainer{
 	outline: black;
 }
 
+ul{
+
+}
+
+ol{
+	
+}
+
+li{
+	color: black;
+	float: center;
+}
