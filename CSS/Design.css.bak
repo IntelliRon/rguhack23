@@ -7,22 +7,24 @@ nav{
 p{
 	color: white;
 	font-size: 20px;
+	
 }
 
 h1{
 	font-size: 40px;
 	float: center-top;
 	text-align: top;
+	padding-left: 300px;
 }
 
 h1, h2, h3, h4{
-	color: black;
+	color: white;
 }
 
 header{
 	background-color: purple;
 	height: 90px;
-	width: 1510px;
+	width: 100%;
 	padding-bottom: 10px;
 }
 
@@ -47,9 +49,11 @@ img{
 }
 
 li{
-	color: black;
-	outline: white;
+	color: white;
 	float: center;
+	list-style-type: none;
+	display: block;
+	padding-bottom: 10px;
 }
 
 object.onmouseover = Highlight(This);
