@@ -27,7 +27,7 @@
             <li>
                 <label for="buildings">Select a building
                 </label>
-                <select name="buildings" onchange="changeMap(this.value)">
+                <select name="buildings" onchange="changeMap(this.value)" id="buildingsDropdown">
                     <option value="Campus">Campus</option>
                     <option value="SIWB">Sir Ian Wood Building</option>
                     <option value="IGB"> Ishbel Gordon Building</option>
@@ -40,8 +40,8 @@
             <li>
                 <label for = "facilities">Select a facility
                 </label>
-                <select name = "facilities" onchange="changeFacility(this.value)">
-                    <option value="default" disabled default>Choose an option...</option>
+                <select name = "facilities" onchange="changeFacility(this.value)" id="facilitiesDropdown">
+                    <option value="default" disabled="disabled" selected="true">Choose an option...</option>
                     <option value = "eating" disabled>-Eating outlets-</option>
                     <option value="costa">Costa</option>
                     <option value="subway"> Subway</option>
@@ -83,7 +83,7 @@
             <button type="button"><img src="images/arrow_down.jpg" alt="Floor Down"></button>
         </div>
 
-        <img src="images/campus.jpg"> </main>
+        <img src="images/campus.jpg" id="map"> </main>
 
         <footer>
             <p>&copy; 2023 ---- group name ----</p>
