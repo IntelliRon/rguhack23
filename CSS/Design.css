@@ -51,6 +51,9 @@ body{
 #map {
 	float: left;
 	width: 90%;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
 #floorNav button {
@@ -89,4 +92,10 @@ li{
 
 #searchButton {
 	cursor: pointer;
+}
+
+.pin {
+	width: 16px;
+	position: absolute;
+	z-index: 100;
 }

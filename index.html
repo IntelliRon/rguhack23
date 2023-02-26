@@ -4,7 +4,7 @@
 
 
 <head>
-    <link rel = "stylesheet" href="CSS/Design.css">
+    <link rel="stylesheet" href="CSS/Design.css">
     <title>RGU Map</title>
 
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <meta name="author" content="Alistair McCulloch, Jaron Frerichs, Nikodem Niemiec, Scott Soiza">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="scripts/buildingData.js"></script>
     <script src="scripts/mapController.js"></script>
 </head>
 
@@ -37,34 +38,34 @@
             </li>
 
             <li>
-                <label for = "facilities">Select a facility
+                <label for="facilities">Select a facility
                 </label>
-                <select name = "facilities" onchange="changeFacility(this.value)" id="facilitiesDropdown">
+                <select name="facilities" onchange="changeFacility(this.value)" id="facilitiesDropdown">
                     <option value="default" disabled="disabled" selected="true">Choose an option...</option>
-                    <option value = "eating" disabled>-Eating outlets-</option>
+                    <option value="eating" disabled>-Eating outlets-</option>
                     <option value="costa">Costa</option>
                     <option value="subway"> Subway</option>
                     <option value="deli"> Jamie Oliver's deli</option>
                     <option value="53.3"> 53.3 degrees </option>
                     <option value="chopping board"> Fresh off the chopping board</option>
-                    <option value ="cafe"> Basement cafe</option>
+                    <option value="cafe"> Basement cafe</option>
 
-                    <option value = "health" disabled>-Health-</option>
+                    <option value="health" disabled>-Health-</option>
                     <option value="sport">RGU Sport</option>
                     <option value="games"> Game room </option>
-                    <option value = "clinic">Physiotherapy clinic</option>
-                    <option value = "toilets">Toilets</option>
-                    <option value = "water-fountain">Water fountains</option>
+                    <option value="clinic">Physiotherapy clinic</option>
+                    <option value="toilets">Toilets</option>
+                    <option value="water-fountain">Water fountains</option>
 
-                    <option name = "support" disabled>-Support-</option>
-                    <option name = "library">Library</option>
-                    <option name = "inclusion">Inclusion Centre</option>
-                    <option name = "study skills">Study skills</option>
-                    <option  name = "counselling">Counselling</option>
-                    <option name = "IT">IT helpdesks</option>
-                </select> 
+                    <option name="support" disabled>-Support-</option>
+                    <option name="library">Library</option>
+                    <option name="inclusion">Inclusion Centre</option>
+                    <option name="study skills">Study skills</option>
+                    <option name="counselling">Counselling</option>
+                    <option name="IT">IT helpdesks</option>
+                </select>
             </li>
-            
+
             <li>
                 <input type="text" placeholder="Search" id="searchInput" style="float: left;">
                 <img src="images/search.png" id="searchButton" style="float: left; width: 20px; height: 20px;">
@@ -80,11 +81,14 @@
             <button type="button" onclick="floorDown()"><img src="images/arrow_down.jpg" alt="Floor Down"></button>
         </div>
 
-        <img src="images/campus.jpg" id="map"> </main>
+        <div id="mapDiv">
+            <img src="images/campus.jpg" id="map">
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; 2023 ---- group name ----</p>
-        </footer>
+    <footer>
+        <p>&copy; 2023 ---- group name ----</p>
+    </footer>
 </body>
 
 </html>

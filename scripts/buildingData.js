@@ -2,12 +2,14 @@ let buildings = {
     "SIWB" : {
         "rooms" : {
             "N118" : [0, 0],
-            "N242" : [0, 0]
+            "N242" : [0, 0],
+            "costa" : [200, 400]
         },
         "toilets" : {
             "3" : [
                 // X, Y locations on image of 3rd floor
-                [0, 0], [0, 0]
+                // Random testing locations
+                [400, 200], [0, 0]
             ],
             "5" : [
                 [0, 0], [0, 0]
@@ -23,7 +25,7 @@ let buildings = {
     "RB" : {
         "rooms" : {
             "221" : [0, 0],
-            "subway" : [0, 0]
+            "subway" : [300, 200]
         }
     }, 
     "GHA" : {

@@ -1,4 +1,7 @@
+let currentRoomPins = [];
+
 function changeMap(destination) {
+    clearPins();
     // Change to corresponding building and floor
 
     // Remove previous choice of facility in facility dropdown
@@ -9,8 +12,8 @@ function changeMap(destination) {
         document.getElementById("map").src = "images/campus.jpg";
         document.getElementById("floorNav").style = "display: none";
 
-    
-    // Buildings
+
+        // Buildings
     } else if (destination === "SIWB") {
         // SIWB default floor is 3
         document.getElementById("map").src = "images/SIWB_F3.jpg";
@@ -43,6 +46,7 @@ function changeMap(destination) {
 
 
 function changeFacility(destination) {
+    clearPins();
     // Change to corresponding building and floor, depending on facility
     // Call different function to point to room
 
@@ -54,7 +58,7 @@ function changeFacility(destination) {
         document.getElementById("floorInput").min = "1";
         document.getElementById("floorInput").max = "6";
         document.getElementById("buildingsDropdown").value = "SIWB";
-        showRoomPin("costa");
+        showRoomPin(buildings.SIWB.rooms.costa[0], buildings.SIWB.rooms.costa[1]);
     } else if (destination === "subway") {
         document.getElementById("map").src = "images/rb-lvl-3.jpg";
         document.getElementById("floorNav").style = "";
@@ -62,12 +66,23 @@ function changeFacility(destination) {
         document.getElementById("floorInput").min = "1";
         document.getElementById("floorInput").max = "6";
         document.getElementById("buildingsDropdown").value = "RB";
-        showRoomPin("subway");
+        showRoomPin(buildings.RB.rooms.subway[0], buildings.RB.rooms.subway[1]);
+    } else if (destination === "toilets") {
+        let building = document.getElementById("buildingsDropdown").value;
+        let floor = document.getElementById("floorInput").value;
+
+        showMultiplePins(buildings[building]["toilets"][floor]);
+    } else if (destination === "water-fountains") {
+        let building = document.getElementById("buildingsDropdown").value;
+        let floor = document.getElementById("floorInput").value;
+
+        showMultiplePins(buildings[building]["fountains"][floor]);
     }
 }
 
 
 function floorUp() {
+    clearPins();
     let currentFloor = +(document.getElementById("floorInput").value);
     let building = document.getElementById("buildingsDropdown").value;
 
@@ -91,6 +106,7 @@ function floorUp() {
 
 
 function floorDown() {
+    clearPins();
     let currentFloor = +(document.getElementById("floorInput").value);
     let building = document.getElementById("buildingsDropdown").value;
 
@@ -113,6 +129,7 @@ function floorDown() {
 }
 
 function changeFloor(newFloor) {
+    clearPins();
     let building = document.getElementById("buildingsDropdown").value;
 
     if (building === "SIWB") {
@@ -128,6 +145,18 @@ function changeFloor(newFloor) {
 function showRoomPin(x, y) {
     // Function to later show the room pin...
     // Will require rooms data (with x and y location)
+    mapX = document.getElementById("map").getBoundingClientRect().left;
+    mapY = document.getElementById("map").getBoundingClientRect().top;
+
+    pin = document.createElement("img");
+    pin.setAttribute("src", "images/marker.png");
+    // pin.setAttribute("id", x + "_" + y + "_marker");
+    pin.setAttribute("class", "pin");
+    pin.setAttribute("style", "top: " + (mapY + y) + "px; left: " + (mapX + x) + "px;");
+    
+    document.getElementById("mapDiv").insertBefore(pin, document.getElementById("map"));
+
+    currentRoomPins.push(pin);
 }
 
 
@@ -144,5 +173,19 @@ function searchRoom(room) {
         let floor = room[1];
         document.getElementById("map").src = "images/grays-toilets-lvl-" + floor + ".jpg";
         showRoomPin(buildings.GSA.rooms[room][0], buildings.GSA.rooms[room][1]);
+    }
+}
+
+
+function showMultiplePins(locations) {
+    for (let i = 0; i < locations.length; i++) {
+        showRoomPin(locations[i][0], locations[i][1]);
+    }
+}
+
+
+function clearPins() {
+    for (let i = currentRoomPins.length - 1; i >= 0; i--) {
+        currentRoomPins.pop().remove();
     }
 }
