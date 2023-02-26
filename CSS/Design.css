@@ -46,4 +46,12 @@ img{
 	float: left;
 }
 
+li{
+	color: white;
+	float: center;
+	list-style-type: none;
+	display: block;
+	padding-bottom: 10px;
+}
+
 /* object.onmouseover = Highlight(This); */
