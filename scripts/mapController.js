@@ -1,35 +1,40 @@
 function changeMap(destination) {
     // Change to corresponding building and floor
 
+    // Remove previous choice of facility in facility dropdown
+    document.getElementById("facilitiesDropdown").value = "default";
+
     // Whole campus
     if (destination === "Campus") {
         document.getElementById("map").src = "images/campus.jpg";
-        document.getElementById("floorInput").value = "0";
-        document.getElementById("floorInput").min = "0";
-        document.getElementById("floorInput").max = "0";
+        document.getElementById("floorNav").style = "display: none";
 
     
     // Buildings
     } else if (destination === "SIWB") {
         // SIWB default floor is 3
         document.getElementById("map").src = "images/SIWB_F3.jpg";
+        document.getElementById("floorNav").style = "";
         document.getElementById("floorInput").value = "3";
         document.getElementById("floorInput").min = "1";
         document.getElementById("floorInput").max = "6";
     } else if (destination === "RB") {
         // RB default floor is 3
         document.getElementById("map").src = "images/rb-lvl-3.jpg";
+        document.getElementById("floorNav").style = "";
         document.getElementById("floorInput").value = "3";
         document.getElementById("floorInput").min = "1";
         document.getElementById("floorInput").max = "6";
     } else if (destination === "GHA") {
         // Floor plans only available for 2nd floor
         document.getElementById("map").src = "images/gha-toilets-lvl-2.jpg";
+        document.getElementById("floorNav").style = "display: none";
         document.getElementById("floorInput").value = "2";
         document.getElementById("floorInput").min = "2";
         document.getElementById("floorInput").max = "2";
     } else if (destination === "GSA") {
         document.getElementById("map").src = "images/grays-toilets-lvl-1.jpg";
+        document.getElementById("floorNav").style = "";
         document.getElementById("floorInput").value = "1";
         document.getElementById("floorInput").min = "1";
         document.getElementById("floorInput").max = "2";
@@ -44,15 +49,19 @@ function changeFacility(destination) {
     // Eating outlets
     if (destination === "costa") {
         document.getElementById("map").src = "images/SIWB_F2.jpg";
+        document.getElementById("floorNav").style = "";
         document.getElementById("floorInput").value = "2";
         document.getElementById("floorInput").min = "1";
         document.getElementById("floorInput").max = "6";
+        document.getElementById("buildingsDropdown").value = "SIWB";
         showRoomPin("costa");
     } else if (destination === "subway") {
         document.getElementById("map").src = "images/rb-lvl-3.jpg";
+        document.getElementById("floorNav").style = "";
         document.getElementById("floorInput").value = "3";
         document.getElementById("floorInput").min = "1";
         document.getElementById("floorInput").max = "6";
+        document.getElementById("buildingsDropdown").value = "RB";
         showRoomPin("subway");
     }
 }
