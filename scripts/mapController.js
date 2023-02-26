@@ -62,3 +62,49 @@ function showRoomPin(room) {
     // Function to later show the room pin...
     // Will require rooms data (with x and y location)
 }
+
+
+function floorUp() {
+    let currentFloor = +(document.getElementById("floorInput").value);
+    let building = document.getElementById("buildingsDropdown").value;
+
+    if (building === "SIWB") {
+        if (currentFloor < 6) {
+            document.getElementById("floorInput").value = currentFloor + 1;
+            document.getElementById("map").src = "images/SIWB_F" + (currentFloor + 1) + ".jpg";
+        }
+    } else if (building === "RB") {
+        if (currentFloor < 6) {
+            document.getElementById("floorInput").value = currentFloor + 1;
+            document.getElementById("map").src = "images/rb-lvl-" + (currentFloor + 1) + ".jpg";
+        }
+    } else if (building === "GSA") {
+        if (currentFloor < 2) {
+            document.getElementById("floorInput").value = currentFloor + 1;
+            document.getElementById("map").src = "images/grays-toilets-lvl-" + (currentFloor + 1) + ".jpg";
+        }
+    }
+}
+
+
+function floorDown() {
+    let currentFloor = +(document.getElementById("floorInput").value);
+    let building = document.getElementById("buildingsDropdown").value;
+
+    if (building === "SIWB") {
+        if (currentFloor > 1) {
+            document.getElementById("floorInput").value = currentFloor - 1;
+            document.getElementById("map").src = "images/SIWB_F" + (currentFloor - 1) + ".jpg";
+        }
+    } else if (building === "RB") {
+        if (currentFloor > 1) {
+            document.getElementById("floorInput").value = currentFloor - 1;
+            document.getElementById("map").src = "images/rb-lvl-" + (currentFloor - 1) + ".jpg";
+        }
+    } else if (building === "GSA") {
+        if (currentFloor > 1) {
+            document.getElementById("floorInput").value = currentFloor - 1;
+            document.getElementById("map").src = "images/grays-toilets-lvl-" + (currentFloor - 1) + ".jpg";
+        }
+    }
+}

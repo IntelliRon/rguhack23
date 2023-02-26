@@ -66,11 +66,14 @@
                 </select> 
             </li>
             <li>
-                <input type = "radio" name = "toilet" value = "toilet">
-                <label for = "toilet">toilet</label>
+                <input type = "radio" name = "water_or_toilet" value = "none" checked="checked">
+                <label for = "water_or_toilet">None</label>
 
-                <input type = "radio" name = "fountain" value = "fountain">
-                <label for = "fountain">Water fontain</label>
+                <input type = "radio" name = "water_or_toilet" value = "toilet">
+                <label for = "water_or_toilet">Toilet</label>
+
+                <input type = "radio" name = "water_or_toilet" value = "fountain">
+                <label for = "water_or_toilet">Water fountain</label>
             </li>
             
         </ul>
@@ -78,9 +81,9 @@
 
     <main>
         <div id="floorNav" style="float: left;">
-            <button type="button"><img src="images/arrow_up.jpg" alt="Floor Up"></button><br />
+            <button type="button" onclick="floorUp()"><img src="images/arrow_up.jpg" alt="Floor Up"></button><br />
             <input type="number" value="0" min="0" max="0" id="floorInput"><br />
-            <button type="button"><img src="images/arrow_down.jpg" alt="Floor Down"></button>
+            <button type="button" onclick="floorDown()"><img src="images/arrow_down.jpg" alt="Floor Down"></button>
         </div>
 
         <img src="images/campus.jpg" id="map"> </main>
