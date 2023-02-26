@@ -50,7 +50,7 @@ body{
 
 #map {
 	float: left;
-	width: 90%;
+	/* width: 90%; */
 	position: relative;
 	top: 0;
 	left: 0;

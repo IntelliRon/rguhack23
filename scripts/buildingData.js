@@ -3,7 +3,7 @@ let buildings = {
         "rooms" : {
             "N118" : [0, 0],
             "N242" : [0, 0],
-            "costa" : [200, 400]
+            "costa" : [380, 390]
         },
         "toilets" : {
             "3" : [
