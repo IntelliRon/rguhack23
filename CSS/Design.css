@@ -2,6 +2,12 @@ nav{
 	background-color: purple;
 	outline: black;
 	float: centre;
+
+	color: white;
+	float: center;
+	list-style-type: none;
+	display: block;
+	padding-bottom: 10px;
 }
 
 p{
@@ -32,28 +38,12 @@ body{
 	background-color: white;
 }
 
-mapContainer{
+#map {
 	outline: black;
-}
-
-ul{
-
-}
-
-ol{
-	
 }
 
 img{
 	float: left;
 }
 
-li{
-	color: white;
-	float: center;
-	list-style-type: none;
-	display: block;
-	padding-bottom: 10px;
-}
-
-object.onmouseover = Highlight(This);
+/* object.onmouseover = Highlight(This); */
