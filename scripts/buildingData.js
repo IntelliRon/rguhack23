@@ -9,7 +9,7 @@ let buildings = {
             "3" : [
                 // X, Y locations on image of 3rd floor
                 // Random testing locations
-                [400, 200], [0, 0]
+                [400, 200], [900, 100]
             ],
             "5" : [
                 [0, 0], [0, 0]
@@ -18,7 +18,7 @@ let buildings = {
         "fountains" : {
             "2" : [
                 // X, Y locations on image of 2nd floor
-                [0, 0]
+                [900, 150]
             ]
         }
     },

@@ -72,7 +72,7 @@ function changeFacility(destination) {
         let floor = document.getElementById("floorInput").value;
 
         showMultiplePins(buildings[building]["toilets"][floor]);
-    } else if (destination === "water-fountains") {
+    } else if (destination === "water-fountain") {
         let building = document.getElementById("buildingsDropdown").value;
         let floor = document.getElementById("floorInput").value;
 
