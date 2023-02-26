@@ -58,12 +58,6 @@ function changeFacility(destination) {
 }
 
 
-function showRoomPin(room) {
-    // Function to later show the room pin...
-    // Will require rooms data (with x and y location)
-}
-
-
 function floorUp() {
     let currentFloor = +(document.getElementById("floorInput").value);
     let building = document.getElementById("buildingsDropdown").value;
@@ -119,4 +113,10 @@ function changeFloor(newFloor) {
     } else if (building === "GSA") {
         document.getElementById("map").src = "images/grays-toilets-lvl-" + newFloor + ".jpg";
     }
+}
+
+
+function showRoomPin(room) {
+    // Function to later show the room pin...
+    // Will require rooms data (with x and y location)
 }
