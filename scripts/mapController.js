@@ -116,7 +116,24 @@ function changeFloor(newFloor) {
 }
 
 
-function showRoomPin(room) {
+function showRoomPin(x, y) {
     // Function to later show the room pin...
     // Will require rooms data (with x and y location)
+}
+
+
+function searchRoom(room) {
+    room = room.toUpperCase();
+    if (room.startsWith("N")) {
+        let floor = room[1];
+        document.getElementById("map").src = "images/SIWB_F" + floor + ".jpg";
+        showRoomPin(buildings.SIWB.rooms[room][0], buildings.SIWB.rooms[room][1]);
+    } else if (room.startsWith("SA")) {
+        document.getElementById("map").src = "images/gha-toilets-lvl-2.jpg";
+        showRoomPin(buildings.GHA.rooms[room][0], buildings.GHA.rooms[room][1]);
+    } else if (room.startsWith("A")) { // Not sure... check how the room names start in grays
+        let floor = room[1];
+        document.getElementById("map").src = "images/grays-toilets-lvl-" + floor + ".jpg";
+        showRoomPin(buildings.GSA.rooms[room][0], buildings.GSA.rooms[room][1]);
+    }
 }

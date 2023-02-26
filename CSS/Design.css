@@ -76,4 +76,6 @@ li{
 	padding-bottom: 10px;
 }
 
-/* object.onmouseover = Highlight(This); */
+#searchButton {
+	cursor: pointer;
+}
