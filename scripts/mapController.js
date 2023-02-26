@@ -31,6 +31,6 @@ function changeMap(element) {
         document.getElementById("map").src = "images/grays-toilets-lvl-1.jpg";
         document.getElementById("floorInput").value = "1";
         document.getElementById("floorInput").min = "1";
-        document.getElementById("floorInput").max = "1";
+        document.getElementById("floorInput").max = "2";
     }
 }
