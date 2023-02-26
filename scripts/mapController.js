@@ -38,10 +38,13 @@ function changeMap(element) {
         document.getElementById("floorInput").value = buildings["GSA"].defaultFloor;
         document.getElementById("floorInput").min = buildings["GSA"].minFloor;
         document.getElementById("floorInput").max = buildings["GSA"].maxFloor;
+    }
+}
 
 
+function changeFacility(element) {
     // Eating outlets
-    } else if (destination === "costa") {
+    if (destination === "costa") {
         document.getElementById("map").src = "images/SIWB_F2.jpg";
         document.getElementById("floorInput").value = "2";
         document.getElementById("floorInput").min = "1";
