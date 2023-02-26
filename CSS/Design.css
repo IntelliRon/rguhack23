@@ -39,10 +39,32 @@ body{
 }
 
 #map {
-	outline: black;
+	float: left;
 }
 
-img{
+#floorNav button {
+	width: 36px;
+	padding: 0;
+}
+
+#floorNav button img {
+	width: 32px;
+	margin: 0;
+	padding: 0;
+}
+
+#floorInput {
+	width: 30px;
+	text-align: center;
+}
+
+#floorInput::-webkit-outer-spin-button,
+#floorInput::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+  	margin: 0;
+}
+
+#logo{
 	float: left;
 }
 
