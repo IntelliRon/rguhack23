@@ -4,70 +4,81 @@
 
 
 <head>
+    <link rel = "stylesheet" href="CSS/Design.css">
     <title>RGU Map</title>
-    <link rel="stylesheet" href="CSS/Design.css">
 
     <meta charset="UTF-8">
     <meta name="description" content="An interactive web map of the RGU Garthdee Campus">
     <meta name="keywords" content="RGU, Map, Campus, Garthdee">
     <meta name="author" content="Alistair McCulloch, Jaron Frerichs, Nikodem Niemiec, Scott Soiza">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="scripts/mapController.js"></script>
 </head>
 
 <body>
     <header>
-        <img src="images/rgu_logo.jpg" alt="RGU logo" alt="RGU logo" style="width: 100px; height : 100px">
+        <img src="images/rgu_logo.jpg" alt="RGU logo"
+        alt = "RGU logo" style = "width: 100px; height : 100px">
         <h1>RGU Map</h1>
     </header>
 
     <nav>
-        <label for="options">Select an option
-        </label>
-        <select name="options" onchange="changeMap(this)">
-            <option value="Campus">Campus</option>
-            <option value="Buildings" disabled>-Buildings-</option>
-            <option value="SIWB">Sir Ian Wood Building</option>
-            <option value="RB"> Riverside Building</option>
-            <option value="GHA"> Garthdee House Annexe (2nd Floor only)</option>
-            <option value="GSA"> Gray's School of Art</option>
+        <ul>
+            <li>
+                <label for="buildings">Select a building
+                </label>
+                <select name="buildings">
+                    <option value="SIWB">Sir Ian Wood Building</option>
+                    <option value="IGB"> Ishbel Gordon Building</option>
+                    <option value="RB"> Riverside Building</option>
+                    <option value="GHA"> Garthdee House Annexe </option>
+                    <option value="GSA"> Gray's School of Art</option>
+                </select>
+            </li>
 
-            <option value="eating" disabled>-Eating outlets-</option>
-            <option value="costa">Costa</option>
-            <option value="subway"> Subway</option>
-            <option value="deli"> Jamie Oliver's deli</option>
-            <option value="53.3"> 53.3 degrees </option>
-            <option value="chopping board"> Fresh off the chopping board</option>
-            <option value="cafe"> Basement cafe</option>
+            <li>
+                <label for = "facilities">Select a facility
+                </label>
+                <select name = "facilities">
+                    <option value = "eating" disabled>-Eating outlets-</option>
+                    <option value="costa">Costa</option>
+                    <option value="subway"> Subway</option>
+                    <option value="deli"> Jamie Oliver's deli</option>
+                    <option value="53.3"> 53.3 degrees </option>
+                    <option value="chopping board"> Fresh off the chopping board</option>
+                    <option value ="cafe"> Basement cafe</option>
 
-            <option value="health" disabled>-Health-</option>
-            <option value="sport">RGU Sport</option>
-            <option value="games"> Game room </option>
-            <option value="clinic">Physiotherapy clinic</option>
-            <option value="toilets">Toilets</option>
-            <option value="water-fountain">Water fountains</option>
+                    <option value = "health" disabled>-Health-</option>
+                    <option value="sport">RGU Sport</option>
+                    <option value="games"> Game room </option>
+                    <option value = "clinic">Physiotherapy clinic</option>
+                    <option value = "toilets">Toilets</option>
+                    <option value = "water-fountain">Water fountains</option>
 
-            <option name="support" disabled>-Support-</option>
-            <option name="library">Library</option>
-            <option name="inclusion">Inclusion Centre</option>
-            <option name="study skills">Study skills</option>
-            <option name="counselling">Counselling</option>
-            <option name="IT">IT helpdesks</option>
-        </select>
+                    <option name = "support" disabled>-Support-</option>
+                    <option name = "library">Library</option>
+                    <option name = "inclusion">Inclusion Centre</option>
+                    <option name = "study skills">Study skills</option>
+                    <option  name = "counselling">Counselling</option>
+                    <option name = "IT">IT helpdesks</option>
+                </select> 
+            </li>
+            <li>
+                <input type = "radio" name = "toilet" value = "toilet">
+                <label for = "toilet">toilet</label>
+
+                <input type = "radio" name = "fountain" value = "fountain">
+                <label for = "fountain">Water fontain</label>
+            </li>
+            
+        </ul>
     </nav>
 
     <main>
-        <button type="button"><img src="images/arrow_up.jpg" alt="Floor Up" style="width: 32px;"></button>
-        <input type="number" value="0" min="0" max="0" id="floorInput">
-        <button type="button"><img src="images/arrow_down.jpg" alt="Floor Down" style="width: 32px;"></button>
+        <img src="images/campus.jpg"> </main>
 
-        <img src="images/campus.jpg" id="map">
-    </main>
-
-    <footer>
-        <p>&copy; 2023 ---- group name ----</p>
-    </footer>
+        <footer>
+            <p>&copy; 2023 ---- group name ----</p>
+        </footer>
 </body>
 
 </html>
