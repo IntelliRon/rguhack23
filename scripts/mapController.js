@@ -108,3 +108,15 @@ function floorDown() {
         }
     }
 }
+
+function changeFloor(newFloor) {
+    let building = document.getElementById("buildingsDropdown").value;
+
+    if (building === "SIWB") {
+        document.getElementById("map").src = "images/SIWB_F" + newFloor + ".jpg";
+    } else if (building === "RB") {
+        document.getElementById("map").src = "images/rb-lvl-" + newFloor + ".jpg";
+    } else if (building === "GSA") {
+        document.getElementById("map").src = "images/grays-toilets-lvl-" + newFloor + ".jpg";
+    }
+}

@@ -30,7 +30,6 @@
                 <select name="buildings" onchange="changeMap(this.value)" id="buildingsDropdown">
                     <option value="Campus">Campus</option>
                     <option value="SIWB">Sir Ian Wood Building</option>
-                    <option value="IGB"> Ishbel Gordon Building</option>
                     <option value="RB"> Riverside Building</option>
                     <option value="GHA"> Garthdee House Annexe </option>
                     <option value="GSA"> Gray's School of Art</option>
@@ -82,7 +81,7 @@
     <main>
         <div id="floorNav" style="float: left;">
             <button type="button" onclick="floorUp()"><img src="images/arrow_up.jpg" alt="Floor Up"></button><br />
-            <input type="number" value="0" min="0" max="0" id="floorInput"><br />
+            <input type="number" value="0" min="0" max="0" id="floorInput" onchange="changeFloor(this.value)"><br />
             <button type="button" onclick="floorDown()"><img src="images/arrow_down.jpg" alt="Floor Down"></button>
         </div>
 
